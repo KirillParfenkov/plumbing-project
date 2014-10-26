@@ -1,6 +1,13 @@
 @import "colors";
 @import "reset";
 @import "vars.less";
+@import "fonts.less";
+
+
+body {
+	background-image: url('../imgs/subtle_dots.png');
+}
+
 
 .content-wrapper {
 	width: @width-page;
@@ -8,6 +15,7 @@
 }
 
 .cutaway-wrapper {
+	position : relative;
 	.cutaway {
 		position: relative;
 		z-index: 20;
@@ -16,37 +24,76 @@
 		box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.75);
 		background : #FFF;
 		bottom: -30px;
-	}	
-}
+		border: 1px solid @border;
 
-.menu-content {
-	position: relative;
-	width: @width-page;
-	margin: auto auto;
-	font-family: 'Philosopher', sans-serif;
-	font-size: 700;
+		.cutaway-content {
+			color: @title-color;
+			padding-top: 70px;
+			.number {
+				font-family: 'Philosopher', sans-serif;
+				font-size: 27px;
+				padding: 10px 0;
+				text-align: center;
+			}
+		}
 
-	.item {
-		float: left;
-		padding-top: 15px;
-		box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75);
-		background: #FFF;
-		height: 37px;
-		margin-left: 30px; 
-		width: 160px;
-		text-align: center;
-		vertical-align: middle;
+		.code {
+			color: @red-mark;
+		}
+	}
+
+	.title-content {
+		font-family: 'Philosopher', sans-serif;
+		font-size: 35px;
+		position : absolute;
+		top : 30px;
+		left: 400px;
+		right: 0px;
+		padding-top: 68px;
+		color : @title-color;
 	}
 }
 
 
+
 .menu-line {
+	color: @title-color;
 	z-index: 10;
 	width: 100%;
-	height: 150px;
-	box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.75);
+	height: 140px;
+	box-shadow: 0px 1px 15px 0px rgba(50, 50, 50, 0.75);
 	background: #99CCFF;
-	padding-top: 50px;
+	padding-top: 80px;
+	border-style: solid;
+	border-color: @line-border;
+	border-width: 1px 0px 1px 0px;
+
+	.menu-content {
+		position: relative;
+		width: @width-page;
+		margin: auto auto;
+		font-family: 'Philosopher', sans-serif;
+		font-size: 700;
+
+		.item {
+			border: 1px solid @border;
+			float: left;
+			padding-top: 17px;
+			box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75);
+			background: #FFF;
+			height: 35px;
+			margin-left: 30px; 
+			width: 160px;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.item:hover {
+			box-shadow: 0px 0px 25px 0px rgba(0, 0, 255, 0.90);
+			cursor : pointer;
+		}
+
+	}
 
 }
 
@@ -57,4 +104,5 @@
 	box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.75);
 	top : -30px;
 	background : #FFF;
+	border: 1px solid @border;
 }
