@@ -5,9 +5,8 @@
 
 
 body {
-	background-image: url('../imgs/subtle_dots.png');
+	background-image: url('../imgs/grey.png');
 }
-
 
 .content-wrapper {
 	width: @width-page;
@@ -19,8 +18,8 @@ body {
 	.cutaway {
 		position: relative;
 		z-index: 20;
-		width: 350px;
-		height: 220px;
+		width: 320px;
+		height: 190px;
 		box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.75);
 		background : #FFF;
 		bottom: -30px;
@@ -28,7 +27,7 @@ body {
 
 		.cutaway-content {
 			color: @title-color;
-			padding-top: 70px;
+			padding-top: 48px;
 			.number {
 				font-family: 'Philosopher', sans-serif;
 				font-size: 27px;
@@ -49,7 +48,7 @@ body {
 		top : 30px;
 		left: 400px;
 		right: 0px;
-		padding-top: 68px;
+		padding-top: 60px;
 		color : @title-color;
 	}
 }
@@ -75,8 +74,8 @@ body {
 		position: relative;
 		width: @width-page;
 		margin: auto auto;
-		font-family: 'Philosopher', sans-serif;
-		font-size: 700;
+		font-family: 'Comfortaa', cursive;
+		font-weight: 700;
 
 		.item {
 			border: 1px solid @border;
@@ -101,11 +100,34 @@ body {
 }
 
 .context-box {
+	font-family: 'Comfortaa', cursive;
 	position: relative;
 	z-index: 20;
-	height: 900px;
+	min-height: 500px;
 	box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.75);
 	top : -30px;
 	background : #FFF;
 	border: 1px solid @border;
+	padding: 32px;
+	color: @text-color;
+
+	p {
+		text-indent: 1.5em;
+		text-align: justify;
+	}
+
+	.title {
+		border-bottom: 2px solid @text-color;
+		font-size: 21px;
+		font-weight: 700;
+	}
+
+	h3 {
+		font-size: 21px;
+		font-weight: 700;
+	}
+
+	ul {
+		list-style-type:circle;
+	}
 }
