@@ -88,6 +88,13 @@ body {
 			width: 160px;
 			text-align: center;
 			vertical-align: middle;
+			a:link {
+				text-decoration: none;
+				color: @title-color;
+			}
+			a:visited  {
+				color: @title-color;
+			}
 		}
 
 		.item:hover {
@@ -120,6 +127,7 @@ body {
 		border-bottom: 2px solid @text-color;
 		font-size: 21px;
 		font-weight: 700;
+		margin-bottom: 30px;
 	}
 
 	h3 {
@@ -129,5 +137,26 @@ body {
 
 	ul {
 		list-style-type:circle;
+	}
+
+	table{
+		width: 100%;
+		margin-top: 50px;
+		td {
+			padding: 10px;
+			background-color: @table-backgound;
+		}
+
+		.price {
+			text-align: right;
+			width: 80px;
+		}
+
+		th {
+			background-color: @table-header;
+			text-align: left;
+			font-weight: 700;
+			padding: 10px;
+		}
 	}
 }
