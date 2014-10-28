@@ -21,7 +21,7 @@ body {
 		width: 320px;
 		height: 190px;
 		box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.75);
-		background : #FFF;
+		background : @base-background;
 		bottom: -30px;
 		border: 1px solid @border;
 
@@ -78,17 +78,20 @@ body {
 		font-weight: 700;
 
 		.item {
+			position: relative;
 			border: 1px solid @border;
 			float: left;
 			padding-top: 17px;
 			box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75);
-			background: #FFF;
+			background: @base-background;
+
 			height: 35px;
 			margin-left: 30px; 
 			width: 160px;
 			text-align: center;
 			vertical-align: middle;
 			a:link {
+				
 				text-decoration: none;
 				color: @title-color;
 			}
@@ -99,7 +102,8 @@ body {
 
 		.item:hover {
 			box-shadow: 0px 0px 25px 0px rgba(51, 34, 0, 0.90);
-			cursor : pointer;
+			background: @button-background-hover;
+			/*cursor : pointer;*/
 		}
 
 	}
@@ -113,7 +117,7 @@ body {
 	min-height: 500px;
 	box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.75);
 	top : -30px;
-	background : #FFF;
+	background : @base-background;
 	border: 1px solid @border;
 	padding: 32px;
 	color: @text-color;
@@ -121,6 +125,12 @@ body {
 	p {
 		text-indent: 1.5em;
 		text-align: justify;
+	}
+
+	.header {
+		background-image: url('../imgs/bg-title5.png');
+		background-color: @table-header;
+		font-weight: 700;
 	}
 
 	.title {
@@ -142,9 +152,11 @@ body {
 	table{
 		width: 100%;
 		margin-top: 50px;
+		border-spacing: 10px;
 		td {
 			padding: 10px;
 			background-color: @table-backgound;
+			margin-top: 10px;
 		}
 
 		.price {
@@ -154,9 +166,48 @@ body {
 
 		th {
 			background-color: @table-header;
+			background-image: url('../imgs/bg-title5.png');
 			text-align: left;
 			font-weight: 700;
 			padding: 10px;
+		}
+	}
+
+	.body.contacts {
+
+		.card {
+			padding: 10px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		.info {
+			background-color: @table-backgound;
+			.code {
+				color: @red-mark;
+				font-weight: 700;
+			}
+		}
+
+		.skype {
+			margin-top: 50px;
+		}
+
+		.email {
+			margin-top: 50px;
+		}
+
+		.phones {
+			margin-top: 30px;	
+		}
+
+		.box {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		.addition-content {
+			margin-top: 50px;
 		}
 	}
 }
