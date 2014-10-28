@@ -91,7 +91,6 @@ body {
 			text-align: center;
 			vertical-align: middle;
 			a:link {
-				
 				text-decoration: none;
 				color: @title-color;
 			}
@@ -147,6 +146,11 @@ body {
 
 	ul {
 		list-style-type:circle;
+		li {
+			padding-top: 5px;
+			padding-bottom: 5px;
+			padding-left: 10px;
+		}
 	}
 
 	table{
@@ -208,6 +212,23 @@ body {
 
 		.addition-content {
 			margin-top: 50px;
+		}
+	}
+
+	.list {
+
+		ul {
+			li:hover {
+				background-color: @table-backgound;
+			}
+
+			a:link {
+				text-decoration: none;
+				color: @text-color;
+			}
+			a:visited  {
+				color: @text-color;
+			}
 		}
 	}
 }
