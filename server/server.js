@@ -14,6 +14,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(serveStatic('../public'));
 
-app.listen(8080, function() {
-	console.log('Server running at 8080 port');
+app.listen(8090, function() {
+	console.log('Server running at 8090 port');
 });

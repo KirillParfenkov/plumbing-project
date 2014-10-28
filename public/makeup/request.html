@@ -30,30 +30,26 @@
 		<div class="content-wrapper">
 			<div class="context-box">
 				<div class="title">
-					Контакты
+					Заказ обратного звонка
 				</div>
-				<div class="body contacts">
-					<div class="phones box">
-						<div class="card header">Телефоны</div>
-						<div class="card info">
-							+375 <span class="code">29</span> 377 88 90
+				<div class="body">
+					<form class="request-form">
+						<div class="row">
+							<label for="reqest-username">Ваше имя</label><input id="reqest-username" name="username" type="text">
 						</div>
-						<div class="card info">
-							+375 <span class="code">29</span> 377 88 90
+						<div class="row">
+							<label for="reqest-phone">Номер телефона</label><input id="reqest-phone" name="phone" type="text">
 						</div>
-					</div>
-					<div class="email box">
-						<div class="card header">Email</div>
-						<div class="card info" >example@gmail.com</div>
-					</div>
-					<div class="skype box">
-						<div class="card header">Skype</div>
-						<div class="card info">skype.test</div>
-					</div>
-					<div class="addition-content">
-						<p>Вот уже более семи лет мы сами занимаемся сантехническими работами и за это время накопили большой опыт в выполнении работ. У нас не бывает ситуации, когда нет варианта решения - из любой ситуации мы всегда найдем выход, а также проконсультируем по поводу того, как сделать что-то лучше и удобнее для Вас при монтаже сантехники.
-						</p>
-					</div>
+						<div class="row">
+							<label for="reqest-email">Ваш е-мail</label><input id="reqest-email" name="email" type="text">
+						</div>
+						<div class="row">
+							<label class="textarea" for="reqest-body">Ваша заявка или вопрос</label><textarea id="reqest-body" name="body"></textarea>
+						</div>
+						<div class="row">
+							<button class="submit">Отправить</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
