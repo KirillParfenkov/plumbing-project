@@ -4,7 +4,8 @@ define([
   'underscore',
   'backbone',
   'views/header/controller',
-], function ($, _, Backbone, Header ) {
+  'views/content/controller',
+], function ($, _, Backbone, Header, Content ) {
   var AppRouter = Backbone.Router.extend({
 
     views : [],
@@ -13,17 +14,19 @@ define([
       'content/:contentId' : 'renderContent'
     },
 
-    initialize : function (options, callback) {
+    initialize : function ( options, callback ) {
 
       var header = new Header();
       header.render();
 
       this.views['header'] = header;
+      this.views['content'] = new Content();
       callback();
     },
 
-    renderContent : function () {
-      console.log('renderContent');
+    renderContent : function ( id ) {
+      console.log( 'id: ' + id );
+      this.views['content'].render( { id : id });
     }
   }); 
 
