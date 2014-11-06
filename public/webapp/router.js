@@ -11,7 +11,8 @@ define([
     views : [],
 
     routes: {
-      'content/:contentId' : 'renderContent'
+      'content/:contentId' : 'renderContent',
+      '' : 'test'
     },
 
     initialize : function ( options, callback ) {
@@ -24,9 +25,12 @@ define([
       callback();
     },
 
-    renderContent : function ( id ) {
-      console.log( 'id: ' + id );
+    renderContent : function ( id ) { 
       this.views['content'].render( { id : id });
+    },
+
+    test : function() {
+      this.views['content'].render( { id : '5453a8e411c9eb2864fd63fe' });
     }
   }); 
 

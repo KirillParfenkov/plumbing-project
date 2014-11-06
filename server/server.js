@@ -6,8 +6,6 @@ var express = require('express'),
 	ContentDao = require('./modules/content-dao'),
 	mongoConnector = require('./modules/db/mongo-connector');
 
-
-
 mongoConnector.connect();
 var contentDao = new ContentDao( './config.json' );
 

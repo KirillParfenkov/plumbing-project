@@ -13,7 +13,7 @@ define([
     content : null,
 
     events : {
-      'click .content-new .saveButton' : 'save',
+      'click .menu-content .item' : 'selectButton',
     },
 
     render : function ( src, callback ) {
@@ -21,8 +21,10 @@ define([
       $(view.el).html(_.template( template ));
     },
 
-    selectButton : function() {
-      console.log( 'Wrap!' );
+    selectButton : function( e ) {
+      event.preventDefault();
+      var ref = $( e.currentTarget ).find('a').attr('href');
+      window.location = ref;
     }
 
   });
