@@ -6,7 +6,7 @@ define([
 ], function( $, _, Backbone, Content ) {
 	 var Variables = Backbone.Collection.extend({
 	 	models: Content,
-	 	url : 'api/variables.js'
+	 	url : 'api/variables'
 	 });
 	 return Variables;
 });

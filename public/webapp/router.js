@@ -3,25 +3,59 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'collections/variables',
   'views/header/controller',
   'views/content/controller',
-], function ($, _, Backbone, Header, Content ) {
+  'views/card/controller',
+  'views/title/controller'
+], function ($, _, Backbone, Variables, Header, Content, Card, Title ) {
   var AppRouter = Backbone.Router.extend({
 
     views : [],
+    variables : [],
+    variablesMap : {},
 
     routes: {
       'content/:contentId' : 'renderContent',
-      '' : 'test'
+      '' : 'start'
     },
 
     initialize : function ( options, callback ) {
 
+      var router = this;
       var header = new Header();
+      var card = new Card();
+      var title = new Title();
+      router.variables = new Variables();
+
+      router.variables.fetch({
+        success : function( variables ) {
+          var variables = variables.toJSON();
+          for( var i = 0; i < variables.length; i++ ) {
+            router.variablesMap[variables[i].name] = variables[i].value;
+          }
+
+          title.render({
+            variables : variables,
+            variablesMap : router.variablesMap
+          });
+
+          card.render({
+            variables : variables,
+            variablesMap : router.variablesMap
+          });
+        },
+        error : function( err ) {
+          console.log( err );
+        }
+      });
+
       header.render();
 
-      this.views['header'] = header;
-      this.views['content'] = new Content();
+      router.views['header'] = header;
+      router.views['card'] = card;
+      router.views['title'] = title;
+      router.views['content'] = new Content();
       callback();
     },
 
@@ -29,7 +63,7 @@ define([
       this.views['content'].render( { id : id });
     },
 
-    test : function() {
+    start : function() {
       this.views['content'].render( { id : '5453a8e411c9eb2864fd63fe' });
     }
   }); 
