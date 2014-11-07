@@ -118,7 +118,6 @@ body {
 
 	table{
 		width: 100%;
-		margin-top: 50px;
 		border-spacing: 10px;
 		td {
 			padding: 10px;
@@ -178,20 +177,17 @@ body {
 		}
 	}
 
-	.list {
+	ul {
+		li:hover {
+			background-color: @table-backgound;
+		}
 
-		ul {
-			li:hover {
-				background-color: @table-backgound;
-			}
-
-			a:link {
-				text-decoration: none;
-				color: @text-color;
-			}
-			a:visited  {
-				color: @text-color;
-			}
+		a:link {
+			text-decoration: none;
+			color: @text-color;
+		}
+		a:visited  {
+			color: @text-color;
 		}
 	}
 

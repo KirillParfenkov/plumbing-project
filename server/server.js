@@ -7,8 +7,6 @@ var express = require('express'),
 	VariablesDao = require('./modules/variables-dao'),
 	mongoConnector = require('./modules/db/mongo-connector');
 
-
-
 mongoConnector.connect();
 var contentDao = new ContentDao( './config.json' );
 var variablesDao = new VariablesDao( './config.json' );
@@ -21,6 +19,7 @@ app.use(session({
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(serveStatic('../public'));
+app.use(serveStatic('../../Lynx/content/files'));
 
 app.listen(8090, function() {
 	console.log('Server running at 8090 port');
