@@ -4,12 +4,14 @@ var express = require('express'),
 	bodyParser = require('body-parser'),
 	serveStatic = require('serve-static'),
 	ContentDao = require('./modules/content-dao'),
+	VariablesDao = require('./modules/variables-dao'),
 	mongoConnector = require('./modules/db/mongo-connector');
 
 
 
 mongoConnector.connect();
 var contentDao = new ContentDao( './config.json' );
+var variablesDao = new VariablesDao( './config.json' );
 
 var app = express();
 
@@ -40,6 +42,16 @@ app.get('/api/contents', function( req, res ) {
 			res.json( 400, err );
 		} else {
 			res.json( 200, contents );
+		}
+	});
+});
+
+app.get('/api/variables', function( req, res ) {
+	variablesDao.getList( function( err, variables ) {
+		if ( err ) {
+			res.json( 400, err );
+		} else {
+			res.json( 200, variables );
 		}
 	});
 });

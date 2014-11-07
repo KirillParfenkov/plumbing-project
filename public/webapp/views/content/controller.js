@@ -24,12 +24,7 @@ define([
           content.log( err );
         }
       });
-    },
-
-    selectButton : function() {
-      console.log( 'Wrap!' );
     }
-
   });
   return PageEdit;
 });
