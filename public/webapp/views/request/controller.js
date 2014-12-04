@@ -14,6 +14,7 @@ define([
 
     events : {
       'click .request-content .submit' : 'submit',
+      'click .request-content .newSubmit' : 'renderNewSubmit',
     },
 
     render : function ( src, callback ) {
@@ -21,12 +22,21 @@ define([
       $(view.el).html(_.template( template ));
     },
 
+    renderNewSubmit : function() {
+      event.preventDefault();
+      $('.row.reqest').show();
+      $('.request-content .newSubmit').hide();
+      $('.request-content .submit').show();
+    },
+ 
     submit : function( e ) {
       event.preventDefault();
       var username = $('#reqest-username').val(),
           phone = $('#reqest-phone').val(),
           email = $('#reqest-email').val(),
           message = $('#reqest-body').val();
+      $reqestRow = $('.row.reqest');
+
       $.ajax({
           url: '/api/services/email',
           type: 'post',
@@ -38,6 +48,9 @@ define([
           },
           success : function() {
             $('#reqest-body').val('');
+            $('.request-content .newSubmit').show();
+            $('.request-content .submit').hide();
+            $reqestRow.hide();
           },
           error : function( err ) {
             console.log( err );
