@@ -7,8 +7,9 @@ define([
   'views/header/controller',
   'views/content/controller',
   'views/card/controller',
-  'views/title/controller'
-], function ($, _, Backbone, Variables, Header, Content, Card, Title ) {
+  'views/title/controller',
+  'views/request/controller'
+], function ($, _, Backbone, Variables, Header, Content, Card, Title, Request ) {
   var AppRouter = Backbone.Router.extend({
 
     views : [],
@@ -17,6 +18,7 @@ define([
 
     routes: {
       'content/:contentId' : 'renderContent',
+      'request' : 'renderRequestPage',
       '' : 'start'
     },
 
@@ -56,11 +58,16 @@ define([
       router.views['card'] = card;
       router.views['title'] = title;
       router.views['content'] = new Content();
+      router.views['request'] = new Request();
       callback();
     },
 
     renderContent : function ( id ) { 
       this.views['content'].render( { id : id });
+    },
+
+    renderRequestPage : function () {
+      this.views['request'].render();
     },
 
     start : function() {

@@ -1,0 +1,8 @@
+{
+	"port": 8080,
+	"email" : {
+		"sender" : "santehnik.stroy.by@gmail.com",
+		"password" : "santehnik26",
+		"service" : "Gmail"
+	}
+}

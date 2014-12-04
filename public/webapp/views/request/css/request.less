@@ -1,0 +1,42 @@
+@import "/css/colors";
+@import "/css/reset";
+@import "/css/vars.less";
+@import "/css/fonts.less";
+
+.request-form {
+	.row {
+		width: 800px;
+		padding: 10px;
+		text-align: right;
+		input {
+			margin-left: 50px;
+			width: 482px;
+		}
+
+		textarea {
+			width: 480px;
+			max-width: 480px;
+			margin-top: 5px;
+			margin-left: 50px;
+			height: 220px;
+		}
+
+		label {
+			vertical-align: top;
+		}
+
+		button.submit {
+			height: 50px;
+			background: #FFF;
+			border: 1px solid #b7b7b7;
+			border-radius: 2px;
+			font-family: 'Comfortaa', cursive;
+			font-weight: 700;
+		}
+
+		button.submit:hover {
+			background: @button-background-hover;
+			cursor : pointer;
+		}
+	}
+}
