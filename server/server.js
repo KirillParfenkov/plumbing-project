@@ -67,7 +67,7 @@ app.post( '/api/services/email', function(req, res) {
 
     emailService.sendMail({
         to : 'Kiryl.Parfiankou.Dev@gmail.com',
-        subject : "Message from the parf.by",
+        subject : "Message from the santehnik-stroy.by",
         text : message,
         html : "<p>От: " + username + "</p><p>Номер телефона:" + phone + "</p><p>Email:" + email + "</p><p>" + message + "</p>"
     }, function( err ) {
