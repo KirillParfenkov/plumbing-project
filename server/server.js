@@ -22,7 +22,7 @@ app.use(session({
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(serveStatic('../public'));
-app.use(serveStatic('../../Lynx/content/files'));
+app.use(serveStatic('../lynx/content/files'));
 
 app.listen(8090, function() {
 	console.log('Server running at 8090 port');
