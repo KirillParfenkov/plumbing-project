@@ -24,8 +24,8 @@ app.use(bodyParser.json());
 app.use(serveStatic('../public'));
 app.use(serveStatic('../lynx/content/files'));
 
-app.listen(8090, function() {
-	console.log('Server running at 8090 port');
+app.listen(80, function() {
+	console.log('Server running at 80 port');
 });
 
 app.get('/api/contents/:id', function( req, res ) {
@@ -66,7 +66,7 @@ app.post( '/api/services/email', function(req, res) {
     	email = req.body.email;
 
     emailService.sendMail({
-        to : 'Kiryl.Parfiankou.Dev@gmail.com',
+        to : 'kacher23@mail.ru',
         subject : "Message from the santehnik-stroy.by",
         text : message,
         html : "<p>От: " + username + "</p><p>Номер телефона:" + phone + "</p><p>Email:" + email + "</p><p>" + message + "</p>"
