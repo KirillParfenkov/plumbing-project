@@ -1,0 +1,46 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Login Page</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="public_css/style.css">
+	<link rel="stylesheet" href="public_css/bootstrap.min.css">
+	<link rel="stylesheet" href="public_css/bootstrap-theme.css">
+
+</head>
+<body>
+	<div class="loginPage center-block">
+		<div class="panel panel-default">
+			<div class="panel-heading"><b>Lynx</b></div>
+			<div class="panel-body">
+				<form class="form-horizontal center-block" role="form" method="POST" class="login" action="/login">
+					<div class="form-group">
+						<label for="email" class="col-sm-2 control-label">Email</label>
+						<div class="col-sm-10">
+							<input id="email" class="form-control" name="email" type="text" placeholder="Email" required autofocus>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="password" class="col-sm-2 control-label">Password</label>
+						<div class="col-sm-10">
+							<input id="password" class="form-control" name="password" type="password" placeholder="Password" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<input type="submit" class="btn btn-default" id="submit" value="Login">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html> 

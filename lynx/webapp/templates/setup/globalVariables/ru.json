@@ -1,0 +1,12 @@
+{
+    "tabListHeader" : "Список Табов",
+    "headerID" : "ID",
+    "headerName" : "Имя",
+    "headerValue" : "Значение",
+    "addItemLink" : "Добавить",
+    "editItemLink" : "Изменить",
+    "deleteItemLink" : "Удалить",
+    "deleteConfirm" : "Переменная ${name} будет удалена. Вы уверены в этом?",
+    "successDeleteMessage" : "<b>Переменная</b> удален.",
+    "errorDeleteMessage" : "Не удалось удалить <b><переменную></переменную></b>."
+}

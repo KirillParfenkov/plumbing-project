@@ -1,0 +1,22 @@
+<div>
+	<h4>Furnitures</h4>
+	<div class="toolbar btn-toolbar" role="toolbar">
+		<div class="btn-group">
+			<a class="btn btn-default" href="#/view/furniture.edit/-1">New</a>
+		</div>
+	</div>
+	<table class="table table-hover">
+		<tr>
+			<th>ID</th>
+			<th>LABEL</th>
+			<th>ACTION</th>
+		</tr>
+		<% _.each( furnitures,  function( furniture ) { %>
+			<tr>
+				<td><%= furniture.id %></td>
+				<td><%= furniture.label %></td>
+				<td><a href='#/view/furniture.view/<%=furniture.id%>'>View</a> <a href='#/view/furniture.edit/<%=furniture.id%>'>Edit</a > <a class="deleteFurnitureLink" href="#" furnitureId="<%=furniture.id%>">Delete</a></td>
+			</tr>
+		<% });%>
+	</table>
+</div>

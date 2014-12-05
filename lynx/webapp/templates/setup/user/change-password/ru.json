@@ -1,0 +1,9 @@
+{
+    "cancelLink" : "Отмена",
+    "saveLink" : "Сохранить",
+    "password" : "Пароль",
+    "repPassword" : "Опять Пороль",
+    "emptyFieldError" : "Поле <b>${ field }</b> Не Заполнено. ",
+    "passNotEqualError" : "Пароли не совподают.",
+    "unknownError" : "Неизвестная ошибка."
+}

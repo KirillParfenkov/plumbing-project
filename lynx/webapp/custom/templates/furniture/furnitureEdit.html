@@ -1,0 +1,32 @@
+<div>
+	<div class="panel panel-default">
+		<div class="panel-heading">Мебель: <%= furniture.label %></div>
+		<div class="panel-body">
+			<form role="form">
+				<div class="form-group">
+					<label for="furnitureLabel" class="control-label">Заголовок</label>
+					<input name="label" class="form-control" id="furnitureLabel" type="text" value="<%= furniture.label %>">
+				</div>
+				<% if ( furniture.id && (furniture.id != -1) ) { %>
+					<div class="form-group">
+						<label for="categoryListCont" class="control-label">Категории</label>
+						<div id="categoryListCont" class="categoryList">
+							<% _.each( categories, function( category ) { %>
+								<span class="category label label-info"><%= category.name %> <a class="deleteLink" categoryId="<%= category.id %>" href=""><span class="glyphicon glyphicon-remove"></span></a></span> 
+							<% }); %>
+							<a href="" id="addCategoryButton" style="text-decoration : none; color : #000;"><span class="glyphicon glyphicon-plus"></span></a>
+						</div>
+					</div>
+				<% } %>
+				<div class="form-group">
+					<label for="furnitureDesc" class="control-label">Описание</label>
+					<textarea name="description" id="furnitureDesc" rows="10" class="form-control"><%= furniture.description %></textarea>
+				</div>
+
+				<div class="form-group">
+					<input class="furnitureSaveButton btn btn-success" type="button" value="Сохранить">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,16 @@
+{
+	"port": 8080,
+	"database" : {
+		"uri" : "localhost",
+		"name" : "plumber",
+		"user" : "root",
+		"password" : "erbnruqp",
+		"connectionLimit" : 10,
+		"port" : "3306"
+	},
+	"email" : {
+		"sender" : "Kiryl.Parfiankou.Dev@gmail.com",
+		"password" : "azk@ovn@gdj",
+		"service" : "Gmail"
+	}
+}

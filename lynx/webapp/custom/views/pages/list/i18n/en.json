@@ -1,0 +1,10 @@
+{
+    "contentListHeader" : "List of Contents",
+    "addItemLink" : "Add",
+    "idHeader" : "ID",
+    "nameHeader" : "Label",
+    "viewLink" : "View",
+    "editLink" : "Edit",
+    "deleteLink" : "Delete",
+    "titleHeader" : "Title"
+}

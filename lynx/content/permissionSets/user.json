@@ -1,0 +1,1 @@
+{"system":{"allowEditTabs":["read"],"allowEditUsers":["read"],"allowEditProfile":["read"],"allowEditСonfiguration":["read"],"allowEditGeoObjects":["read"]},"tables":{"attachments":["read"],"categories":["read"],"files":["read"],"furnitures":["read"],"geoObjects":["read"],"geoObjectTypes":["read","edit"],"profiles":["read","edit"],"tabs":["read"]}}

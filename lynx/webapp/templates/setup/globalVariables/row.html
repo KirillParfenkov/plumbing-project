@@ -1,0 +1,17 @@
+<tr>
+    <td class="view-id"><%= variable._id %></td>
+    <td class="name">
+        <span class="view-name"><%= variable.name %></span>
+        <input class="edit-name" type="text" value="<%= variable.name %>"/>
+    </td>
+    <td class="value">
+        <span class="view-value"><%= variable.value %></span>
+        <input class="edit-value" type="text" value="<%= variable.value %>"/>
+    </td>
+    <td class="action icon-fond">
+        <a value="<%= variable._id %>" class="save">&#xf1ac;</a>
+        <a value="<%= variable._id %>" class="cancel">&#xf1a0;</a>
+        <a value="<%= variable._id %>" class="edit">&#xf194;</a>
+        <a value="<%= variable._id %>" class="delete">&#xf217;</a>
+    </td>
+</tr>

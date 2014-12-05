@@ -1,0 +1,22 @@
+/* Not really too concerned with how to organize CSS 
+   the opinions are too diverse                      */
+
+/* Third party helper libraries */
+@import url("normalize.css");
+@import url("webix/webix.css");
+@import url("http://fonts.googleapis.com/css?family=Play:400,700&subset=latin,cyrillic,latin-ext");
+
+/* Custom themes */
+@import url("theme.css");
+@import url("menus.css");
+@import url("layout.css");
+
+@import url("bootstrap.min.css");
+@import url("../js/libs/jquery-ui/jquery-ui.css");
+@import url("../js/libs/jstree/dist/themes/default/style.min.css");
+
+
+@font-face {
+    font-family: foundation-icons;
+    src : url("../fonts/foundation-icons/foundation-icons.woff");
+}

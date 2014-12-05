@@ -1,0 +1,46 @@
+<div>
+	<div class="panel panel-default">
+		<% if ( geoobject ) { %>
+			<div class="panel-heading">Геообъект: <%= geoobject.label %></div>
+		<% } else { %>
+			<div class="panel-heading">Новый геообъект</div>
+		<% } %>
+		<div class="panel-body">
+			<form role="form">
+				<div class="form-group">
+					<label for="geoobjectLabel" class="control-label">Наименование</label>
+					<input name="label" class="form-control" id="geoobjectLabel" type="text" value="<%= geoobject.label %>">
+				</div>
+				<div class="form-group">
+					<label for="geoobjectMark" class="control-label">Метка</label>
+					<input name="label" class="form-control" id="geoobjectMark" type="text" value="<%= geoobject.mark %>">
+				</div>
+				<div class="form-group">
+					<label for="geoobjectAddres" class="control-label">Адрес</label>
+					<textarea name="description" id="geoobjectAddres" rows="10" class="form-control"><%= geoobject.address %></textarea>
+				</div>
+				<div class="form-group">
+					<label for="geoobjectType">Тип</label>
+					<select name="type" id="geoobjectType" class="form-control">
+						<option value="-1">Выберите значение</option>
+						<% _.each( geoobjectTypes, function( type ) { %>
+							<option value="<%= type.id %>" <% if( geoobject.type == type.id ) { %> selected <% } %> >
+								<%= type.label %>
+							</option>
+						<% }); %>
+					</select>
+				</div>
+				<div class="form-group">
+					<label class="control-label">Расположение</label>
+					<button id="placemarkUncheckBtn" type="button" class="btn btn-default <% if ( !placemarkChecked ) { %>hidden<% } %>" >Очистить</button>
+					<button id="placemarkCheckBtn" type="button" class="btn btn-default <% if ( placemarkChecked ) { %>hidden<% } %>">Отметить</button>
+					
+					<div id="geoobjectMap" style="margin-top: 10px; height: 400px"></div>
+				</div>
+				<div class="form-group">
+					<input class="goobjectSaveButton btn btn-success" type="button" value="Сохранить">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

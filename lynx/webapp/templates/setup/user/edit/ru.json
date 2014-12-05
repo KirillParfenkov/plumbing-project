@@ -1,0 +1,9 @@
+{
+    "changePasswordLink" : "Изменить Пароль",
+    "toListLink" : "К Списку",
+    "cancelLink" : "Отмена",
+    "saveLink" : "Сохранить",
+    "email" : "Почта",
+    "firstName" : "Имя",
+    "lastName" : "Фамилия"
+}

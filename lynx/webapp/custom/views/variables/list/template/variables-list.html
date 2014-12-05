@@ -1,0 +1,35 @@
+<div class="variable-list">
+	<nav class="navbar navbar-default"  role="navigation">
+		<div class="container-fluid">
+			<a class="navbar-brand">Переменные</a>
+            <ul class="action nav navbar-nav navbar-right">
+                <li><a class="add" style="cursor:pointer" ><b><%_ addItemLink %></b></a></li>
+            </ul>
+		</div>
+	</nav>
+
+    <div class="mesage-box"></div>
+
+	<table class="variables table table-hover">
+		<tr>
+			<th><%_ headerName %></th>
+			<th><%_ headerValue %></th>
+            <th></th>
+		</tr>
+		<% _.each( variables,  function( variable ) { %>
+			<tr>
+				<td class="name"><%= variable.name %></td>
+				<td class="value">
+                    <span class="view-value"><%= variable.value %></span>
+                    <input class="edit-value" type="text" value="<%= variable.value %>"/>
+                </td>
+                <td class="action icon-fond">
+                    <a value="<%= variable._id %>" class="save">&#xf1ac;</a>
+                    <a value="<%= variable._id %>" class="cancel">&#xf1a0;</a>
+                    <a value="<%= variable._id %>" class="edit">&#xf194;</a>
+                    <a value="<%= variable._id %>" class="delete">&#xf217;</a>
+                </td>
+			</tr>
+		<% });%>
+	</table>
+</div>

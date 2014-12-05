@@ -1,0 +1,25 @@
+<div class="media-body">
+	<form role="form">
+		<div class="form-group">
+			<label for="nameInput" >Name</label>
+			<input type="text" class="form-control" id="nameInput" name="name" placeholder="Name" value="<%= file.name %>">
+		</div>
+		<div class="form-group">
+			<label for="typeInput" >Type</label>
+			<select name="type" id="typeInput" class="form-control">
+				<option value="-1">Select Value</option>
+				<% _.each( types, function( type ) { %>
+					<option value="<%= type.id %>" <% if( file.type == type.id ) { %> selected <% } %> >
+						<%= type.label %>
+					</option>
+				<% }); %>
+			</select>
+		</div>
+		<div class="form-group">
+	    	<div>
+	      		<button class="savePictureButton btn btn-default">Save</button>
+	      		<button class="cancelPictureButton btn btn-default">Cancel</button>
+	    	</div>
+	  	</div>
+	</form>
+</div>

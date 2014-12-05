@@ -1,0 +1,93 @@
+<div>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<a class="navbar-brand"><%= profile.label %></a>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#/setup/profilesView"><b>К Списку</b></a></li>
+				<li><a href="#/setup/profileView/<%= profile.id %>"><b>Отмена</b></a></li>
+				<li><a style="cursor:pointer" class="profileSaveButton navbar-link" type="button"><b>Сохранить<b></a></li>
+			</ul>
+		</div>
+	</nav>
+	<div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Системные</div>
+			<div class="panel-body">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Возможность</th>
+							<th>Доступ</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% _.each( scheme.system, function( permisstion ) { %>
+							<tr>
+								<td><%= permisstion.name %></td>
+								<td class="col-sm-2">
+									<% _.each( permisstion.values, function( value ) { %>
+										<div class="checkbox">
+											<label><input ns="system" name="<%= permisstion.name %>" type="checkbox" value="<%= value %>" 
+											              <% if ( viewHalper.getPermissionValue( permisstion, permissionSet, 'system', value ) ) { %> checked <% } %>> <%= value %> </label>
+										</div>
+									<% }); %>
+								</td>
+							</tr>
+						<% }); %>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Табы</div>
+			<div class="panel-body">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>NAME</th>
+							<th>VISIBLE</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% _.each( tabList, function( tab ) { %>
+							<tr>
+								<td><%= tab.label %></td>
+								<td class="col-sm-2">
+									<input ns="tabs" name="tabs" type="checkbox" value="<%= tab.id %>" <% if (tab.visible) { %> checked <% } %>>
+								</td>
+							</tr>
+						<%	}); %>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Таблицы</div>
+			<div class="panel-body">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Возможность</th>
+							<th>Доступ</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% _.each( scheme.tables, function( permisstion ) { %>
+							<tr>
+								<td><%= permisstion.name %></td>
+								<td class="col-sm-2">
+									<% _.each( permisstion.values, function( value ) { %>
+										<div class="checkbox">
+											<label><input ns="tables" name="<%= permisstion.name %>" type="checkbox" value="<%= value %>" 
+											              <% if ( viewHalper.getPermissionValue( permisstion, permissionSet, 'tables', value ) ) { %> checked <% } %>> <%= value %> </label>
+										</div>
+									<% }); %>
+								</td>
+							</tr>
+						<% }); %>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+<div class="profile-list">
+    <nav class="navbar navbar-default"  role="navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand"><%_ profileListHeader %></a>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/setup/tabEdit/-1"><b><%_ addItemLink %></b></a></li>
+            </ul>
+        </div>
+    </nav>
+	<table class="profiles table table-hover">
+		<tr>
+			<th><%_ idHeader %></th>
+            <th><%_ nameHeader %></th>
+			<th></th>
+		</tr>
+		<% _.each( profiles,  function( profile ) { %>
+			<tr>
+				<td><%= profile.id %></td>
+				<td><%= profile.label %></td>
+				<td class="action">
+                    <a href='#/setup/profileView/<%=profile.id%>'><%_ viewLink %></a> |
+                    <a href='#/setup/profileEdit/<%=profile.id%>'><%_ editLink %></a>
+                </td>
+			</tr>
+		<% });%>
+	</table>
+</div>
