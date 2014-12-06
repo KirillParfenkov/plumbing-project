@@ -3,10 +3,11 @@ require.config({
   paths: {
     // Major libraries
     jquery: 'libs/jquery/jquery-2.1.1',
+    lazyload: 'libs/jquery/jquery.lazyload.min',
     underscore: 'libs/underscore/underscore', // https://github.com/amdjs
     backbone: 'libs/backbone/backbone', // https://github.com/amdjs
     async: 'libs/async/async',
-    slick : 'libs/slick/slick.min',
+    slick: 'libs/slick/slick.min',
 
     // Require.js plugins
     text: 'libs/require/text',

@@ -1,12 +1,13 @@
 define([
   'module',
   'jquery',
+  'lazyload',
   'underscore',
   'backbone',
   'models/content',
   'text!./templates/content.html',
   'less!./css/content.less'
-], function ( module, $, _, Backbone, Content, template ) {
+], function ( module, $, lazyload, _, Backbone, Content, template ) {
   var PageEdit = Backbone.View.extend({
 
     el : '.context-box',
@@ -19,6 +20,7 @@ define([
         success : function( result ) {
           console.log( 'success' );
           $(view.el).html(_.template( template, { content : result.toJSON() } ));
+          $("img.lazy").lazyload();
         },
         error : function( err ) {
           content.log( err );
