@@ -1,0 +1,28 @@
+<div class="header">
+	<nav class="top-nav navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<p class="navbar-text"><a href="#/setup/selfView"><%= currentUser.firstName %> <%= currentUser.lastName %></a></p>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="logout"><a href="/logout"><span><%_ exit_link %></span> <span class="glyphicon glyphicon-log-out"></a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="page-header">
+  		<span class="header">lynx 
+  			<small><a href="#/setup"><span class="icon glyphicon glyphicon-align-justify"></span></a></small>
+  			<span class="header-menu-container"></span>
+  		</span>
+	</div>
+	<div class="menu">
+		<ul id="tabMenu" class="nav nav-pills">
+			<% _.each( tabs, function( tab ) { %>
+				<li value="<%= tab.name %>"><a class="tabLink__sys" href="<%= tab.link %>"><%= tab.label %></a></li>
+			<% });%>
+		</ul>
+	</div>
+</div>
+<div class="page">
+	<div class="main-message-box"></div>
+	<div class="content"></div>
+</div>
+<div class="footer"></div>

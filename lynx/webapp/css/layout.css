@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  margin: auto;
+
+}
+.page {
+  margin-top: 20px;
+  padding-top: 20px;
+  position: relative;
+}
+
+.sideBar {
+  position: absolute;
+  width: 150px;
+  left: -200px;
+  top: 32px;
+}
+
+.content {
+  left: 200px;
+  top: 0;
+}
+
+.toolbar {
+  margin-bottom: 10px;
+}
+
+.categoryList .category {
+  display: inline-block;
+  padding: 7px;
+  font-size: 11pt;
+  border: 1px solid #8c8b8b;
+  margin: 1px;
+
+}
+
+.categoryList .category a span {
+  display: inline;
+}
+
+.categoryList .category a {  
+  text-decoration : none;
+  color : #FFF;
+}
+
+.noBackgroundImage {
+  background-image: none;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.fileLoadBox {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.page-header .header {
+  font-size: 30px;
+}
+
+.page-header .icon {
+  font-size: 19px;
+}
+
+.page-header .header-menu-container ul{
+  display: inline;
+
+}
+
+.page-header .header-menu-container li{
+  display: inline;
+
+}
+
+.header .logout a {
+  font-size: 14px;
+  font-weight: bold;
+}

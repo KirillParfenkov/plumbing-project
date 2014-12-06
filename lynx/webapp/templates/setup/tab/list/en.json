@@ -1,0 +1,14 @@
+{
+    "tabListHeader" : "Tab List",
+    "headerID" : "ID",
+    "headerName" : "Name",
+    "headerLabel" : "Label",
+    "headerLink" : "Link",
+    "headerAction" : "Action",
+    "addItemLink" : "New",
+    "editItemLink" : "Edit",
+    "deleteItemLink" : "Delete",
+    "deleteConfirm" : "Tab ${name} will be deleted. Are you sure?",
+    "successDeleteMessage" : "<b>Tab</b> was deleted.",
+    "errorDeleteMessage" : "<b>Tab</b> has not been deleted."
+}

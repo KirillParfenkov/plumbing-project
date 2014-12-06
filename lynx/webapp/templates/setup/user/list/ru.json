@@ -1,0 +1,10 @@
+{
+    "userListHeader" : "Пользователи",
+    "addUserLInk" : "Добавить",
+    "headerId" : "ID",
+    "headerEmail" : "Почта",
+    "headerFirstName" : "Имя",
+    "headerLastName" : "Фамилия",
+    "headerAction" : "Действие",
+    "editUserLink" : "Изменить"
+}

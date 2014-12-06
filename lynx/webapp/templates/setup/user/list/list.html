@@ -1,0 +1,29 @@
+<div class="user-list">
+  	<nav class="navbar navbar-default"  role="navigation">
+  		<div class="container-fluid">
+  			<a class="navbar-brand"><%_ userListHeader %></a>
+  			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#/setup/userAdd"><b><%_ addUserLInk %></b></a></li>
+			</ul>
+  		</div>
+  	</nav>
+    <div class="mesage-box"></div>
+	<table class="users table table-hover">
+		<tr>
+			<th><%_ headerId %></th>
+			<th><%_ headerEmail %></th>
+			<th><%_ headerFirstName %></th>
+			<th><%_ headerLastName %></th>
+			<th></th>
+		</tr>
+		<% _.each( users,  function( user ) { %>
+			<tr>
+				<td><%= user.id %></td>
+				<td><%= user.email %></td>
+				<td><%= user.firstName %></td>
+				<td><%= user.lastName %></td>
+				<td class="action"><a href='#/setup/userEdit/<%=user.id%>'><%_ editUserLink %></a></td>
+			</tr>
+		<% });%>
+	</table>
+</div>

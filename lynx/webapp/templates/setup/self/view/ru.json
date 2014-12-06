@@ -1,0 +1,7 @@
+{
+	"self_header" : "Детали Пользователя",
+	"email" : "Email",
+	"first_name" : "Имя",
+	"last_name" : "Фамилия",
+	"profile" : "Профайл"
+}

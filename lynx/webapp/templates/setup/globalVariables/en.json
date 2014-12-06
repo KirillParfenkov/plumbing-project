@@ -1,0 +1,12 @@
+{
+    "tabListHeader" : "Tab List",
+    "headerID" : "ID",
+    "headerName" : "Name",
+    "headerValue" : "Value",
+    "addItemLink" : "New",
+    "editItemLink" : "Edit",
+    "deleteItemLink" : "Delete",
+    "deleteConfirm" : "Variable ${name} will be deleted. Are you sure?",
+    "successDeleteMessage" : "<b>Variable</b> was deleted.",
+    "errorDeleteMessage" : "<b>Variable</b> has not been deleted."
+}

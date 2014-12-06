@@ -1,0 +1,37 @@
+{
+  "name": "Linx",
+  "main" : "server.js",
+  "author" : "Kiryl Parfiankou",
+  "scripts": {
+    "start": "server.js"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/KirillParfenkov/Lynx.git"
+  },
+
+  "version": "0.2.0",
+  "dependencies": {
+    "mongodb" :"1.4.x",
+    "express": "4.4.x",
+    "connect": "3.x",
+    "nconf" : "x",
+    "mysql" : "2.x",
+    "cookie-session" : "1.x",
+    "body-parser": "1.4.x",
+    "serve-static" : "1.x",
+    "mc" : "1.x",
+    "async" : "x",
+    "formidable" : "1.x",
+    "connect-multiparty" : "1.0.5",
+    "mkpath" : "x",
+    "passport" : "0.2.x",
+    "passport-local" : "1.x",
+    "password-hash" : "1.2.x",
+    "nodemailer" : "1.2.2",
+    "mongoose" : "3.8.x",
+    "method-override" : "2.3",
+    "rimraf" : "2.x"
+  }
+}

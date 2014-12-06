@@ -1,0 +1,39 @@
+.title {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+}
+
+.title h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 20px;
+}
+
+.menu ul{
+  margin: 0;
+}
+.menu li {
+  float: left;
+  margin-left: 10px;
+  list-style-type: none;
+}
+
+.menu li .active {
+  background: #FFAAAA;
+}
+
+.menu li.other-link {
+  float: right;
+}
+
+a.active {
+  color: #000;
+  text-decoration: none;
+}

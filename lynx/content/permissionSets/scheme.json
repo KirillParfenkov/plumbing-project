@@ -1,0 +1,80 @@
+{
+	"system" : [
+		{ 
+			"name" : "allowEditTabs",
+			"type" : "String",
+			"multi" : true,
+			"values" : ["read", "edit"]
+		},
+		{ 
+			"name" : "allowEditUsers",
+			"type" : "String",
+			"multi" : true,
+			"values" : ["read", "edit"] 
+		},
+		{ 
+			"name" : "allowEditProfile",
+			"type" : "String",
+			"multi" : true,
+			"values" : ["read", "edit"] 
+		},
+		{ 
+			"name" : "allowEditСonfiguration",
+			"type" : "String",
+			"multi" : true,
+			"values" : ["read", "edit"] 
+		}
+	],
+
+	"tables" : [
+		{ 
+			"name" : "attachments",
+			"type" : "String",
+			"multi" : true,
+			"values" : ["read", "edit"]
+		},
+		{ 
+			"name" : "categories",
+			"type" : "String",
+			"multi" : true,
+			"values" : ["read", "edit"]
+		},
+		{ 
+			"name" : "files",
+			"type" : "String",
+			"multi" : true,
+			"values" : ["read", "edit"]
+		},
+		{ 
+			"name" : "furnitures",
+			"type" : "String",
+			"multi" : true,
+			"values" : ["read", "edit"]
+		},
+		{ 
+			"name" : "geoObjects",
+			"type" : "String",
+			"multi" : true,
+			"values" : ["read", "edit"]
+		},
+		{ 
+			"name" : "geoObjectTypes",
+			"type" : "String",
+			"multi" : true,
+			"values" : ["read", "edit"]
+		},
+		{ 
+			"name" : "profiles",
+			"type" : "String",
+			"multi" : true,
+			"values" : ["read", "edit"]
+		},
+		{ 
+			"name" : "tabs",
+			"type" : "String",
+			"multi" : true,
+			"values" : ["read", "edit"]
+		}
+
+	]
+}

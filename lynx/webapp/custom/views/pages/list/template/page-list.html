@@ -1,0 +1,29 @@
+<div class="content-list">
+    <nav class="navbar navbar-default"  role="navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand"><%_ contentListHeader %></a>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/view/pages.new.controller"><b><%_ addItemLink %></b></a></li>
+            </ul>
+        </div>
+    </nav>
+	<table class="profiles table table-hover">
+		<tr>
+			<th><%_ idHeader %></th>
+			<th><%_ titleHeader %></th>
+            <th><%_ nameHeader %></th>
+			<th></th>
+		</tr>
+		<% _.each( contents,  function( content ) { %>
+			<tr>
+				<td><%= content.id %></td>
+				<td><%= content.title %></td>
+				<td><%= content.name %></td>
+				<td class="action">
+                    <a href='#/view/pages.edit.controller/<%=content._id%>'><%_ editLink %></a> |
+                    <a href='#' id="<%=content._id%>" class="deleteLink"><%_ deleteLink %></a>
+                </td>
+			</tr>
+		<% });%>
+	</table>
+</div>

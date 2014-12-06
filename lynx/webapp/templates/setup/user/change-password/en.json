@@ -1,0 +1,9 @@
+{
+    "cancelLink" : "Cancel",
+    "saveLink" : "Save",
+    "password" : "Password",
+    "repPassword" : "Repeat Password",
+    "emptyFieldError" : "Field <b>${ field }</b> Is Empty. ",
+    "passNotEqualError" : "Passwords is not equal",
+    "unknownError" : "Unknown Error"
+}

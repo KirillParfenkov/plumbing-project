@@ -1,0 +1,21 @@
+<div class="upload-file">
+	<div class="panel panel-default">
+		<div class="panel-heading"><b>Загрузить Файл</b></div>
+		<div class="panel-body">
+			<div class="fileLoadBox">
+				<form id="addFileForm" role="form" method="POST" enctype="multipart/form-data" action="/services/fileExplorer/uploadFile">
+					<div class="form-group">
+						<input name="file" type="file" id="imageFile">
+						<p class="help-block">Выберите файл...</p>
+						<div class="path">
+							<b>Загрузить в:</b> <input name="path" class="path-input" type="text" value="/"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-default furnitureAddImage">Загрузить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
